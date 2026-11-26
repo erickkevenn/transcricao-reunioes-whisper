@@ -1,0 +1,22 @@
+TRANSCRIÇÃO DE REUNIÕES
+=======================
+
+1. Salve a gravação da reunião na pasta "Gravações".
+2. Dê dois cliques em "transcrever.bat".
+   - Ele transcreve TODAS as gravações pendentes, uma por vez, com barra de progresso.
+   - O computador não entra em suspensão enquanto transcreve.
+   - No fim, toca um aviso e abre a pasta do resultado.
+3. O resultado fica em "Reuniões\<nome da gravação>\":
+     <nome>.mp3                       -> o áudio original (movido de Gravações)
+     <nome> - transcrição.txt         -> só o texto
+     <nome> - com timestamps.txt      -> texto com [início - fim] de cada trecho
+
+Também dá para arrastar um ou mais áudios de qualquer lugar para cima do "transcrever.bat".
+
+Se der erro em alguma gravação, o áudio continua em "Gravações" para tentar de novo.
+
+Modelo padrão: turbo (mais preciso). Na primeira vez ele baixa ~1,6 GB.
+Para usar outro modelo pelo PowerShell (dentro da pasta Whisper):
+  python sistema\transcrever.py --modelo small
+
+Pasta "sistema": script e instalador (instalar.bat só precisa rodar uma vez).
